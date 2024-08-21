@@ -3,6 +3,7 @@ import Home from './Home';
 import { deleteExpense, getAllExpense } from '../redux/mySlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import ExportCSVComponent from './ExportFile';
 
 function Expenses() {
     let token = localStorage.getItem("authToken");
@@ -112,7 +113,7 @@ function Expenses() {
                 </tbody>
                 ))}
               </table>
-              
+              <ExportCSVComponent/>
           </div>
         )}
       </div>
